@@ -65,6 +65,11 @@ public class RenderEnqueue {
 								continue;
 							}
 
+							if( (currentFluid.getType() == Fluids.WATER || currentFluid.getType() == Fluids.FLOWING_WATER) && Controller.isWaterActive() ) {
+								renderQueue.add(new RenderBlockProps(pos.getX(), pos.getY(), pos.getZ(), 0x0000ff));
+								continue;
+							}
+
 							// Reject blacklisted blocks
 							if( Controller.blackList.contains(currentState.getBlock()) )
 								continue;

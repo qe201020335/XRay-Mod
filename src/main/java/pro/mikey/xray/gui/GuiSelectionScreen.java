@@ -136,7 +136,12 @@ public class GuiSelectionScreen extends GuiBase {
             button.setMessage(Component.translatable("xray.input.show-lava", Controller.isLavaActive()));
         }));
 
-        addRenderableWidget(distButtons = new SupportButtonInner((getWidth() / 2) + 79, getHeight() / 2 + 36, 120, 20, I18n.get("xray.input.distance", Controller.getVisualRadius()), "xray.tooltips.distance", button -> {
+        addRenderableWidget(distButtons = new SupportButtonInner((getWidth() / 2) + 79, getHeight() / 2 + 36, 120, 20, I18n.get("xray.input.show-water", Controller.isWaterActive()), "xray.tooltips.show-water", button -> {
+            Controller.toggleWater();
+            button.setMessage(Component.translatable("xray.input.show-water", Controller.isWaterActive()));
+        }));
+
+        addRenderableWidget(distButtons = new SupportButtonInner((getWidth() / 2) + 79, getHeight() / 2 + 66, 120, 20, I18n.get("xray.input.distance", Controller.getVisualRadius()), "xray.tooltips.distance", button -> {
             Controller.incrementCurrentDist();
             button.setMessage(Component.translatable("xray.input.distance", Controller.getVisualRadius()));
         }));
@@ -144,7 +149,7 @@ public class GuiSelectionScreen extends GuiBase {
             Button.builder(Component.translatable("xray.single.help"), button -> {
                 getMinecraft().setScreen(new GuiHelp());
             })
-                    .pos(getWidth() / 2 + 79, getHeight() / 2 + 58)
+                    .pos(getWidth() / 2 + 79, getHeight() / 2 + 88)
                     .size(60, 20)
                     .build()
         );
@@ -152,7 +157,7 @@ public class GuiSelectionScreen extends GuiBase {
                 Button.builder(Component.translatable("xray.single.close"), button -> {
                     this.onClose();
                 })
-                        .pos((getWidth() / 2 + 79) + 62, getHeight() / 2 + 58)
+                        .pos((getWidth() / 2 + 79) + 62, getHeight() / 2 + 88)
                         .size(59, 20)
                         .build()
         );

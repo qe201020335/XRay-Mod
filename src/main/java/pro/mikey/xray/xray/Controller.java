@@ -46,6 +46,7 @@ public class Controller {
     // Draw states
     private static boolean xrayActive = false; // Off by default
     private static boolean lavaActive = Configuration.store.lavaActive.get();
+    private static boolean waterActive = Configuration.store.waterActive.get();
 
     public static BlockStore getBlockStore() {
         return blockStore;
@@ -81,6 +82,15 @@ public class Controller {
     public static void toggleLava() {
         lavaActive = !lavaActive;
         Configuration.store.lavaActive.set(lavaActive);
+    }
+
+    public static boolean isWaterActive() {
+        return waterActive;
+    }
+
+    public static void toggleWater() {
+        waterActive = !waterActive;
+        Configuration.store.waterActive.set(waterActive);
     }
 
     public static int getRadius() {

@@ -22,6 +22,7 @@
   "xray.input.add_look": "添加目视方块",
   "xray.input.distance": "距离: %s",
   "xray.input.show-lava": "显示熔岩: %s",
+  "xray.input.show-water": "显示熔水: %s",
   "xray.input.toggle_oredict": "使用矿物词典",
 
   "xray.title.config": "配置方块",
@@ -48,6 +49,7 @@
   "xray.tooltips.add_block_in_hand": "自动选择您手中的方块\n将其添加到列表中.",
   "xray.tooltips.add_block_looking_at": "自动选择你目视的方块\n将其添加到列表中.",
   "xray.tooltips.show_lava": "就像普通方块一样用红色显示岩浆.\n小心! 它很烫.",
+  "xray.tooltips.show_water": "就像普通方块一样用蓝色显示岩浆.\n小心! 它很凉.",
   "xray.tooltips.distance": "警告: 较大的半径将在更新时延迟一秒钟.",
   "xray.tooltips.edit1": "点击切换启用/禁用",
   "xray.tooltips.edit2": "按住 Shift 并单击以编辑.",

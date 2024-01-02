@@ -37,6 +37,8 @@ public class Configuration
         public final ForgeConfigSpec.IntValue radius;
         public final ForgeConfigSpec.BooleanValue lavaActive;
 
+        public final ForgeConfigSpec.BooleanValue waterActive;
+
         Store() {
             BUILDER.comment("DO NOT TOUCH!").push("store");
 
@@ -47,6 +49,10 @@ public class Configuration
             lavaActive = BUILDER
                     .comment("Memory value for if you're currently wanting Lava to be rendered into the mix")
                     .define("lavaActive", false);
+
+            waterActive = BUILDER
+                    .comment("Memory value for if you're currently wanting Water to be rendered into the mix")
+                    .define("waterActive", false);
 
             BUILDER.pop();
         }
